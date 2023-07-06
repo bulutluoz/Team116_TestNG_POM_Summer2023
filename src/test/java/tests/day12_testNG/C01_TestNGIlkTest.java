@@ -22,4 +22,20 @@ public class C01_TestNGIlkTest {
         Driver.closeDriver();
 
     }
+
+    @Test
+    public void test02(){
+
+        // youtube anasayfaya gidin
+
+        Driver.getDriver().get("https://www.youtube.com");
+        ReusableMethods.bekle(3);
+
+        // url'i yazdirin
+        System.out.println(Driver.getDriver().getCurrentUrl());
+        ReusableMethods.bekle(3);
+
+        // sayfayi kapatin
+        Driver.closeDriver();
+    }
 }
