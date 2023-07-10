@@ -17,7 +17,13 @@ public class FacebookPage {
     @FindBy(id="pass")
     public WebElement passwordKutuElementi;
 
-    @FindBy(name = "login")
+    @FindBy(xpath = "//*[@name='login']")
     public WebElement girisYapButonu;
+
+    @FindBy(xpath = "//*[@title='Decline optional cookies']")
+    public WebElement cookiesButton;
+
+    @FindBy(xpath = "//*[@class='_9ay7']")
+    public WebElement basarisizGirisyaziElementi;
 
 }
