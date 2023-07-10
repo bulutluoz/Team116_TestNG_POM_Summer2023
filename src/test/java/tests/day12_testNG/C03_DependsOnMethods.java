@@ -16,7 +16,7 @@ public class C03_DependsOnMethods {
 
     @Test(priority=-5)
     public void urlTest(){
-        Driver.getDriver().get("https://www.samazon.com");
+        Driver.getDriver().get("https://www.amazon.com");
 
         // 1- url'in amazon icerdigini test edin
         String expectedIcerik ="amazon";
