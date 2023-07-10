@@ -24,7 +24,7 @@ public class AmazonPage {
     public WebElement aramaKutusu;
 
 
-    @FindBy(xpath = "//h1[@class='a-size-base s-desktop-toolbar a-text-normal']")
+    @FindBy(xpath = "//div[@class='a-section a-spacing-small a-spacing-top-small']")
     public WebElement sonucYaziElementi;
 
 

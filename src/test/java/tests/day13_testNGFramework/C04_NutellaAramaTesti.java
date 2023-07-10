@@ -22,13 +22,10 @@ public class C04_NutellaAramaTesti {
         amazonPage.aramaKutusu.sendKeys(ConfigReader.getProperty("amazonArananKelime")+ Keys.ENTER);
 
         // sonuclarin Nutella icerdigini test edin
-        ReusableMethods.bekle(3);
 
         String expectedIcerik = ConfigReader.getProperty("amazonArananKelime");
         String actualSonucYazisi = amazonPage.sonucYaziElementi.getText();
 
-        System.out.println(ConfigReader.getProperty("amazonArananKelime"));
-        System.out.println(amazonPage.sonucYaziElementi.getText());
         Assert.assertTrue(actualSonucYazisi.contains(expectedIcerik));
 
         // sayfayi kapatin
