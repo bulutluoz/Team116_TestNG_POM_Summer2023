@@ -9,7 +9,7 @@ import utilities.Driver;
 
 public class C03_SoftAssertion {
 
-    @Test
+    @Test(groups = "mini regression1")
     public void nutellaTesti(){
 
         // amazona gidin

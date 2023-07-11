@@ -1,0 +1,31 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Istenen groups calistirma">
+    
+    
+    <!-- 
+        istedigimiz gruplari toplu calistirmak icin
+        
+        xml dosyasinda iki hiyerarsi olusturuyoruz
+        1- calisacak veya calismayacak gruplari belirleyecek hiyerarsi
+        2- calistirilacak testlerin bulunduklari yerleri gosteren hiyerarsi
+    -->
+
+    <test name="groups calistirma">
+
+        <groups>
+            <run>
+                <include name="smoke"></include>
+                <exclude name="regression"></exclude>
+                <include name="mini regression1"></include>
+            </run>
+        </groups>
+        
+        <packages>
+            <package name="tests.day13_testNGFramework"></package>
+            <package name="tests.day14_testNgFramework_xmlFiles"></package>
+        </packages>
+
+
+    </test>
+</suite>
