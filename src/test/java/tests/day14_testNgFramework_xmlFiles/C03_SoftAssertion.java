@@ -20,20 +20,20 @@ public class C03_SoftAssertion {
         // 2- istediginiz tum testleri softAssert objesini kullanarak yapin
 
         // title'in best icermedigini test edin
-        String unexpectedIcerik = "Amazon";
+        String unexpectedIcerik = "best";
         String actualTitle = Driver.getDriver().getTitle();
 
         softAssert.assertFalse(actualTitle.contains(unexpectedIcerik),"Title istenmeyen icerik barindiriyor");
 
         // url'in "https://www.amazon.com/" oldugunu test edin
-        String expectedUrl = "https://www.amazon.com";
+        String expectedUrl = "https://www.amazon.com/";
         String actualUrl = Driver.getDriver().getCurrentUrl();
 
         softAssert.assertEquals(actualUrl,expectedUrl,"Url beklenenden farkli");
 
         //Nutella aratin
         AmazonPage amazonPage = new AmazonPage();
-        amazonPage.aramaKutusu.sendKeys("Kutella"+ Keys.ENTER);
+        amazonPage.aramaKutusu.sendKeys("Nutella"+ Keys.ENTER);
 
         // arama sonuclarinin Nutella icerdigini test edin
         String expectedUrunIcerik = "Nutella";

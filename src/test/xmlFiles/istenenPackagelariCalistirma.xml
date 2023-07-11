@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Istenen package'lari calistirma">
+    
+    <test name="toplu package calistirma">
+        
+        <packages>
+            <package name="tests.day12_testNG"></package>
+            <package name="tests.day14_testNgFramework_xmlFiles"></package>
+        </packages>
+    </test>
+</suite>

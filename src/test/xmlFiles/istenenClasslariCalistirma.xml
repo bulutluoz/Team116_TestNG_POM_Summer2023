@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Istenen Classlari toplu calistirma">
+    
+    <test name="class calistirma">
+        
+        <classes>
+            <class name="tests.day12_testNG.C03_DependsOnMethods"></class>
+            <class name="tests.day13_testNGFramework.C06_QDLoginTest"></class>
+            <class name="tests.day14_testNgFramework_xmlFiles.C03_SoftAssertion"></class>
+        </classes>
+    </test>
+</suite>
