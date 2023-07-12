@@ -1,7 +1,33 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 
-<suite name="Istenen Classlari paralel calistirma" parallel="classes" thread-count="2">
+<suite name="Istenen Classlari paralel calistirma" parallel="classes" thread-count="2" verbose="3">
 
+    <!--
+        paralel calistirmak icin xml dosyamizda
+        cok kucuk iki ekleme yapmamiz yeterlidir
+
+        1- parallel="classes" / test / methods
+           bolusumun hangi seviyede yapilacagini belirler
+           testler calisirken cakismalar olmamasi,
+           gorev bolusumunun mumkun oldugunca esit olmasi,
+           bagimli testlerin ayni browswer tarafindan calistirilabilmesi
+           icin tum classlari/package'lari manuel olarak testlere ayirip
+           test bazinda bolusum yapmak en uyugunu olacaktir
+         2-thread-count="2"
+           ayni anda calisacak browsewr sayisini belirler
+           yaptigimiz bu configuration'da browser'in ne oldugu
+           configuration.properties dosyasindan geldigi icin
+           paralel calisan tum browser'lar aynidir
+           farkli browser'larla paralel calistirma icin (cross browser test)
+           ozel bir configuration yapmak gereklidir
+
+
+        verbose="3" : tum xml dosyalarinda kullanilabilir
+                      calistirma sonrasinda konsolda yazdirilan detay seviyesini belirler
+                      1 : minimum
+                      10: maximum
+                      olmak uzere istediginiz degeri secebilirsiniz
+    -->
     <test name="class calistirma">
 
         <classes>
