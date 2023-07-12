@@ -1,0 +1,25 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+
+<suite name="Cross Browser calistirma">
+
+    <!--
+        kac farkli browser kullanacaksak
+        her biri icin test tagindan itibaren
+        calisacak testleri yazmaliyiz
+
+        her test'in altinda parameter kullanarak istenen browser'i yazin
+    -->
+    <test name="Chrome ile calisacak testler">
+        <parameter name="browser" value="chrome"></parameter>
+
+
+    </test>
+
+    <test name="Firefox ile calisacak testler">
+        <parameter name="browser" value="firefox"></parameter>
+
+
+    </test>
+
+</suite>
