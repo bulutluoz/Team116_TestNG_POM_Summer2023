@@ -1,4 +1,4 @@
-package tests.day19_crossBrowserTesting;
+package tests.day15_crossBrowserTestler;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;

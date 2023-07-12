@@ -1,5 +1,5 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
-<suite name="Cross Browser calistirma">
+<suite name="Cross Browser calistirma" parallel="tests" thread-count="2">
 
     <!--
         kac farkli browser kullanacaksak
@@ -10,17 +10,18 @@
     -->
     <test name="Chrome ile calisacak testler">
         <parameter name="browser" value="chrome"></parameter>
-        <packages>
-            <package name="tests.day15_crossBrowserTestler"></package>
-        </packages>
+        <classes>
+            <class name="tests.day15_crossBrowserTestler.C01_AmazonSearch"></class>
+            <class name="tests.day15_crossBrowserTestler.C02_AlertsTesti"></class>
+        </classes>
 
     </test>
 
     <test name="Firefox ile calisacak testler">
         <parameter name="browser" value="firefox"></parameter>
-        <packages>
-            <package name="tests.day15_crossBrowserTestler"></package>
-        </packages>
+            <classes>
+                <class name="tests.day15_crossBrowserTestler.C03_BasicAuthentication"></class>
+            </classes>        
 
     </test>
 
